@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling Merchant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="status-bar">
+            <div class="status">
+                <div class="lawrence-status">
+                    <h3>Lawrence</h3>
+                    <span>Day: <span id="day">1</span></span>
+                    <span>Location: <span id="current-town">Pazzio</span></span>
+                    <span>Money: <span id="money">100</span> gold</span>
+                    <span>Daily Expenses: <span id="expenses">13</span> gold</span>
+                    <span>Trading Reputation: <span id="reputation">Novice</span></span>
+                </div>
+                <div class="holo-status">
+                    <h3>Holo the Wise Wolf</h3>
+                    <span>Mood: <span id="holo-status">happy</span></span>
+                    <span>Last Fed: <span id="last-fed">Never</span></span>
+                    <span>Trading Wisdom: <span id="wisdom-bonus">None</span></span>
+                    <button id="feed-holo" onclick="game.feedHolo()" class="feed-button">Feed Holo an Apple</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button onclick="game.saveGame()" class="control-button">Save Game</button>
+            <button onclick="game.loadGame()" class="control-button">Load Game</button>
+            <button onclick="game.restartGame()" class="control-button">Restart Game</button>
+        </div>
+
+        <div class="main-content">
+            <div class="market-panel">
+                <h2>Market</h2>
+                <div id="town-goods" class="goods-list"></div>
+            </div>
+
+            <div class="inventory-panel">
+                <h2>Inventory</h2>
+                <div id="player-inventory" class="goods-list"></div>
+            </div>
+        </div>
+
+        <div class="travel-panel">
+            <h2>Connected Towns</h2>
+            <div id="connected-towns"></div>
+        </div>
+
+        <div class="message-log" id="message-log"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html> 

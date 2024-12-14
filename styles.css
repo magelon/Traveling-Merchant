@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.game-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.status-bar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lawrence-status, .holo-status {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lawrence-status h3, .holo-status h3 {
+    margin: 0 0 10px 0;
+    color: #ff9900;
+}
+
+.lawrence-status span, .holo-status span {
+    display: block;
+    margin: 5px 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.market-panel, .inventory-panel, .travel-panel {
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.goods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.good-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.good-item span {
+    word-break: break-word;
+    transition: color 0.3s ease;
+}
+
+.good-item button {
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.good-item button:hover {
+    background-color: #45a049;
+}
+
+.good-item button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.travel-panel {
+    text-align: center;
+}
+
+.travel-panel button {
+    margin: 5px;
+    padding: 12px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    width: calc(100% - 10px);
+    max-width: 200px;
+}
+
+.travel-panel button:hover {
+    background-color: #1976D2;
+}
+
+.message-log {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .game-container {
+        max-width: 1000px;
+        padding: 20px;
+    }
+
+    .status {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .good-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .travel-panel button {
+        width: auto;
+    }
+
+    .lawrence-status, .holo-status {
+        flex: 1;
+        margin: 0 10px;
+    }
+}
+
+/* Make text more readable on small screens */
+@media (max-width: 360px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .good-item span {
+        font-size: 0.9em;
+    }
+}
+
+#holo-status {
+    color: #ff9900;
+    font-style: italic;
+}
+
+#wisdom-bonus {
+    color: #00ff00;
+}
+
+.feed-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.feed-button:hover {
+    background-color: #ff8800;
+}
+
+.game-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.control-button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.control-button:hover {
+    background-color: #444;
+} 
